@@ -1,4 +1,7 @@
 #pragma once
+#include <iostream>
+using namespace std;
+
 class Date
 {
 	unsigned int day;
@@ -7,9 +10,18 @@ class Date
 
 public:
 
-	Date(unsigned int day = 1, unsigned int month = 1, unsigned int year = 1980)
+	Date()
 	{
+		this->day = 1;
+		this->month = 1;
+		this->year = 1980;
+	};
 
+	Date(unsigned int day, unsigned int month, unsigned int year)
+	{
+		this->day = day;
+		this->month = month;
+		this->year = year;
 	};
 
 };
