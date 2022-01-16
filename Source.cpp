@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include "Date.h"
 using namespace std;
 
 class Student
@@ -9,6 +10,6 @@ class Student
 	string patronymic;
 	string adress;
 	string tel;
-
+	Date date;
 
 };
