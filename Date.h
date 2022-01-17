@@ -24,5 +24,9 @@ public:
 		this->year = year;
 	};
 
+	void ShowDate()
+	{
+		cout << day << "." << month << "." << year;
+	}
 };
 
