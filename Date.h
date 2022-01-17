@@ -15,14 +15,14 @@ public:
 		this->day = 1;
 		this->month = 1;
 		this->year = 1980;
-	};
+	}
 
 	Date(int day, int month, int year)
 	{
 		this->day = day;
 		this->month = month;
 		this->year = year;
-	};
+	}
 
 	void ShowDate()
 	{
