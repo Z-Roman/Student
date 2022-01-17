@@ -4,9 +4,9 @@ using namespace std;
 
 class Date
 {
-	unsigned int day;
-	unsigned int month;
-	unsigned int year;
+	int day;
+	int month;
+	int year;
 
 public:
 
@@ -17,7 +17,7 @@ public:
 		this->year = 1980;
 	};
 
-	Date(unsigned int day, unsigned int month, unsigned int year)
+	Date(int day, int month, int year)
 	{
 		this->day = day;
 		this->month = month;
