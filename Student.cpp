@@ -10,7 +10,7 @@ Student Student::ShowStudent()
 		<< "Отчество\t" << patronymic << "\n"
 		<< "Дата р.\t" << date << "\n"
 		<< "Адрес\t" << adress << "\n"
-		<< "Адрес\t" << adress << "\n"
+		<< "Адрес\t" << adress << "\n";
 
 }
 
