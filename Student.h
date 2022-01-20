@@ -87,4 +87,6 @@ public:
 
 
 
+	Student ShowStudent();
+
 };
