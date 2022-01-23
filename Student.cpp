@@ -3,6 +3,8 @@
 #include "Date.h"
 using namespace std;
 
+
+
 void Student::ShowStudent()
 {
 	cout << "Èìÿ\t" << name << "\n"

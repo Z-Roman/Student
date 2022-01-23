@@ -15,9 +15,10 @@ class Student
 	int size_cred = 0;
 	int size_exam = 0;
 	int size_cours = 0;
-//	int* mark_cred;
-	//int* mark_exam;
-//	int* mark_cours;
+	int count_marks = 0;
+	int* mark_cred = nullptr;
+	int* mark_exam = nullptr;
+	int* mark_cours = nullptr;
 
 public:
 
@@ -42,6 +43,7 @@ public:
 		this->adress = adress;
 		this->tel = tel;
 		this->date = date;
+		this->mark_cred = new int[100];
 	}
 
 	void SetName(string name)
