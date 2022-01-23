@@ -3,15 +3,14 @@
 #include "Date.h"
 using namespace std;
 
-Student Student::ShowStudent()
+void Student::ShowStudent()
 {
 	cout << "Имя\t" << name << "\n"
 		<< "Фамилия\t" << surname << "\n"
 		<< "Отчество\t" << patronymic << "\n"
-		<< "Дата р.\t" << date << "\n"
+		//<< "Дата р.\t" << date << "\n"
 		<< "Адрес\t" << adress << "\n"
-		<< "Адрес\t" << adress << "\n";
-
+		<< "Телефон\t" << tel << "\n";
 }
 
 /*	string name;

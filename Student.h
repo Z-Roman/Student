@@ -15,9 +15,9 @@ class Student
 	int size_cred = 0;
 	int size_exam = 0;
 	int size_cours = 0;
-	int* mark_cred;
-	int* mark_exam;
-	int* mark_cours;
+//	int* mark_cred;
+	//int* mark_exam;
+//	int* mark_cours;
 
 public:
 
@@ -48,13 +48,9 @@ public:
 	{
 		this->name = name;
 	}
-	void SetSurame(string surname)
+	void SetSurname(string surname)
 	{
 		this->surname = surname;
-	}
-	void SetPatronymic(string patronymic)
-	{
-		this->patronymic = patronymic;
 	}
 	void SetPatronymic(string patronymic)
 	{
@@ -87,6 +83,6 @@ public:
 
 
 
-	Student ShowStudent();
+	void ShowStudent();
 
 };

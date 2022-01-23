@@ -28,5 +28,6 @@ public:
 	{
 		cout << day << "." << month << "." << year;
 	}
+
 };
 
