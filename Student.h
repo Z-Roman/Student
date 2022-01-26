@@ -11,7 +11,7 @@ class Student
 	string patronymic;
 	string adress = "No adress";
 	string tel = "No tel";
-	Date date;
+	//Date date;
 	int size_cred = 0;
 	int size_exam = 0;
 	int size_cours = 0;
@@ -34,16 +34,16 @@ public:
 		this->surname = surname;
 		this->patronymic = patronymic;
 	}
-	Student(string name, string surname, string patronymic, string adress, string tel,
-		Date date)
+	Student(string name, string surname, string patronymic, string adress, string tel)
 	{
 		this->name = name;
 		this->surname = surname;
 		this->patronymic = patronymic;
 		this->adress = adress;
 		this->tel = tel;
-		this->date = date;
-		this->mark_cred = new int[100];
+		this->mark_cred = new int[size_cred];
+		this->mark_exam = new int[size_exam];
+		this->mark_cours = new int[size_cours];
 	}
 
 	void SetName(string name)
@@ -66,22 +66,18 @@ public:
 	{
 		this->tel = tel;
 	}
-	void SetDate(Date date)
-	{
-		this->date = date;
-	}
-	void SetSizeCred(int size_cred)
-	{
-		this->size_cred = size_cred;
-	}
-	void SetSizeExam(int size_exam)
-	{
-		this->size_exam = size_exam;
-	}
-	void SetSizeCours(int size_cours)
-	{
-		this->size_cours = size_cours;
-	}
+
+	void SetDate(int d, int m, int y);
+	//{
+	//	void SetDay(d);
+	//}
+
+	void SetMark_Cred(int mark);
+
+	void SetMark_Exam(int mark);
+
+	void SetMark_Cours(int mark);
+
 
 
 

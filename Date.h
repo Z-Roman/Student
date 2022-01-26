@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include "Student.h"
 using namespace std;
 
 class Date
@@ -17,16 +18,38 @@ public:
 		this->year = 1980;
 	}
 
-	Date(int day, int month, int year)
+	//Date(int day, int month, int year)
+	//{
+	//	this->day = day;
+	//	this->month = month;
+	//	this->year = year;
+	//}
+
+	const int GetDay() const
 	{
-		this->day = day;
-		this->month = month;
-		this->year = year;
+		return day;
 	}
 
-	void ShowDate()
+	const int GetMonth() const
 	{
-		cout << day << "." << month << "." << year;
+		return month;
+	}
+
+	const int GetYear() const
+	{
+		return year;
+	}
+
+	void SetDay(int day)
+	{
+		this->day = day;
+	}
+
+	void SetDate(int d, int m, int y)
+	{
+		day = d;
+		month = m;
+		year = y;
 	}
 
 };
