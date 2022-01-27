@@ -11,7 +11,9 @@ class Student
 	string patronymic;
 	string adress = "No adress";
 	string tel = "No tel";
-	//Date date;
+	int day;
+	int month;
+	int year;
 	int size_cred = 0;
 	int size_exam = 0;
 	int size_cours = 0;
@@ -19,6 +21,8 @@ class Student
 	int* mark_cred = nullptr;
 	int* mark_exam = nullptr;
 	int* mark_cours = nullptr;
+	
+	
 
 public:
 
@@ -67,19 +71,13 @@ public:
 		this->tel = tel;
 	}
 
-	void SetDate(int d, int m, int y);
-	//{
-	//	void SetDay(d);
-	//}
+	void SetDate(int day, int month, int year);
 
 	void SetMark_Cred(int mark);
 
 	void SetMark_Exam(int mark);
 
 	void SetMark_Cours(int mark);
-
-
-
 
 	void ShowStudent();
 

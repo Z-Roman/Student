@@ -18,12 +18,12 @@ public:
 		this->year = 1980;
 	}
 
-	//Date(int day, int month, int year)
-	//{
-	//	this->day = day;
-	//	this->month = month;
-	//	this->year = year;
-	//}
+	Date(int day, int month, int year)
+	{
+		this->day = day;
+		this->month = month;
+		this->year = year;
+	}
 
 	const int GetDay() const
 	{
@@ -51,6 +51,5 @@ public:
 		month = m;
 		year = y;
 	}
-
 };
 

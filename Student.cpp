@@ -5,9 +5,11 @@ using namespace std;
 
 
 
-void Student::SetDate(int d, int m, int y)
+void Student::SetDate(int day, int month, int year)
 {
-	void SetDay(d)
+	this->day = day;
+	this->month = month;
+	this->year = year;
 }
 
 void Student::SetMark_Cred(int mark)
@@ -58,12 +60,12 @@ void Student::SetMark_Cours(int mark)
 
 void Student::ShowStudent()
 {
-	cout << "Имя\t" << name << "\n";
-	cout << "Фамилия\t" << surname << "\n";
-	cout << "Отчество\t" << patronymic << "\n";
-	//cout << "Дата р.\t" << date << "\n";
-	cout << "Адрес\t" << adress << "\n";
-	cout << "Телефон\t" << tel << "\n";
+	cout << "Имя\t\t\t" << name << "\n";
+	cout << "Фамилия\t\t\t" << surname << "\n";
+	cout << "Отчество\t\t" << patronymic << "\n";
+	cout << "Дата р.\t\t\t" << day << "." << month << "." << year << "\n";
+	cout << "Адрес\t\t\t" << adress << "\n";
+	cout << "Телефон\t\t\t" << tel << "\n";
 	cout << "Оценки по зачетам\t";
 
 		if (size_cred > 0)
