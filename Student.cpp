@@ -59,17 +59,17 @@ void Student::SetDate(int day, int month, int year)
 	this->year = year;
 }
 
-void Student::SetMark_Cred(int mark)
+void Student::SetMark_Cred(int mark)  //добавление оценки (в массив оценок)
 {
-	int* temp = new int[size_cred + 1];
-	for (int i = 0; i < size_cred; i++)
+	int* temp = new int[size_cred + 1];  //временный дин. массив размером +1 (дл€ добавлени€ оценки)
+	for (int i = 0; i < size_cred; i++) //копирование элементов во временный массив
 	{
 		temp[i] = mark_cred[i];
 	}
-	temp[size_cred] = mark;
-	size_cred++;
-	delete[]mark_cred;
-	mark_cred = temp;
+	temp[size_cred] = mark; //новую оценку в последнюю €чейку
+	size_cred++; //старый массыв увеличиваю на 1
+	delete[]mark_cred; //удаление значение €чеек старого массива
+	mark_cred = temp;  //копирование в старый массив значение из временного
 }
 
 void Student::SetMark_Exam(int mark)
