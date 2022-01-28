@@ -38,11 +38,8 @@ public:
 		this->patronymic = patronymic;
 	}
 
-	Student(string name, string surname, string patronymic, string adress, string tel)
+	Student(string name, string surname, string patronymic, string adress, string tel) :Student(name, surname, patronymic)
 	{
-		this->name = name;
-		this->surname = surname;
-		this->patronymic = patronymic;
 		this->adress = adress;
 		this->tel = tel;
 		this->mark_cred = new int[size_cred];
