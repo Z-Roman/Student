@@ -22,8 +22,6 @@ class Student
 	int* mark_exam = nullptr;
 	int* mark_cours = nullptr;
 	
-	
-
 public:
 
 	Student()
@@ -32,12 +30,14 @@ public:
 		string surname = "Surname";
 		string patronymic = "Patronymic";
 	}
+
 	Student(string name, string surname, string patronymic)
 	{
 		this->name = name;
 		this->surname = surname;
 		this->patronymic = patronymic;
 	}
+
 	Student(string name, string surname, string patronymic, string adress, string tel)
 	{
 		this->name = name;
@@ -73,6 +73,8 @@ public:
 
 	void operator = (const Student& other);
 
+	Student(const Student& other);
+
 	void SetDate(int day, int month, int year);
 
 	void SetMark_Cred(int mark);
@@ -82,5 +84,7 @@ public:
 	void SetMark_Cours(int mark);
 
 	void ShowStudent();
+
+	~Student();
 
 };

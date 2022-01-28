@@ -21,14 +21,52 @@ void Student::operator=(const Student& other)
 	{
 		delete[] this->mark_cred;
 	}
+
 	if (this->mark_exam != nullptr)
 	{
 		delete[] this->mark_exam;
 	}
+
 	if (this->mark_cours != nullptr)
 	{
 		delete[] this->mark_cours;
 	}
+
+	this->mark_cours = new int[other.size_cours];
+
+	for (int i = 0; i < other.size_cours; i++)
+	{
+		this->mark_cours[i] = other.mark_cours[i];
+	}
+
+	this->mark_cred = new int[other.size_cred];
+
+	for (int i = 0; i < other.size_cred; i++)
+	{
+		this->mark_cred[i] = other.mark_cred[i];
+	}
+
+	this->mark_exam = new int[other.size_exam];
+
+	for (int i = 0; i < other.size_exam; i++)
+	{
+		this->mark_exam[i] = other.mark_exam[i];
+	}
+}
+
+Student::Student(const Student& other)
+{
+	this->name = other.name;
+	this->surname = other.surname;
+	this->patronymic = other.patronymic;
+	this->adress = other.adress;
+	this->tel = other.tel;
+	this->day = other.day;
+	this->month = other.month;
+	this->year = other.year;
+	this->size_cred = other.size_cred;
+	this->size_exam = other.size_exam;
+	this->size_cours = other.size_cours;
 
 	this->mark_cours = new int[other.size_cours];
 
@@ -145,4 +183,14 @@ void Student::ShowStudent()
 			}
 			cout << "\n";
 		}
+
+	cout << "\n";
+}
+
+Student::~Student()
+{
+	cout << "Вызвался деструктор " << this << "\n";
+	delete[] mark_cred;
+	delete[] mark_cours;
+	delete[] mark_exam;
 }
