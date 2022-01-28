@@ -8,6 +8,7 @@ int main()
 {
 	setlocale(0, "");
 	Student a;
+	Student b;
 	a.SetDate(10, 12, 2000);
 	a.SetName("Roman");
 	a.SetSurname("Zharuk");
@@ -25,4 +26,7 @@ int main()
 	a.SetMark_Cours(12);
 	a.SetTel("0990426204");
 	a.ShowStudent();
+	b = a;
+	b.ShowStudent();
+
 }

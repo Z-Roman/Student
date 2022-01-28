@@ -71,6 +71,8 @@ public:
 		this->tel = tel;
 	}
 
+	void operator = (const Student& other);
+
 	void SetDate(int day, int month, int year);
 
 	void SetMark_Cred(int mark);
