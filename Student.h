@@ -24,27 +24,27 @@ class Student
 	
 public:
 
-	Student()
+	// этот делегируем к главному
+	Student() // : Student(...
 	{
-		string name = "Name";
-		string surname = "Surname";
-		string patronymic = "Patronymic";
+		
 	}
 
-	Student(string name, string surname, string patronymic)
+	// этот делегируем к главному
+	Student(string name, string surname, string patronymic) // : Student(...
 	{
-		this->name = name;
-		this->surname = surname;
-		this->patronymic = patronymic;
+		
 	}
 
-	Student(string name, string surname, string patronymic, string adress, string tel) :Student(name, surname, patronymic)
+	// этот конструктор было бы здорово назначить главным
+	Student(string name, string surname, string patronymic, string adress, string tel)
 	{
 		this->adress = adress;
 		this->tel = tel;
 		this->mark_cred = new int[size_cred];
 		this->mark_exam = new int[size_exam];
 		this->mark_cours = new int[size_cours];
+		// в главном конструкторе все поля должны быть проинициализированы (например day month year)
 	}
 
 	void SetName(string name)
