@@ -90,6 +90,21 @@ Student::Student(const Student& other) //конструктор копирования
 	}
 }
 
+void Student::SetAll(string name, string surname, string patronymic, string adress, string tel, int day, int month, int year)
+{
+		this->name = name;
+		this->surname = surname;
+		this->patronymic = patronymic;
+		this->adress = adress;
+		this->tel = tel;
+		this->mark_cred = new int[size_cred];
+		this->mark_exam = new int[size_exam];
+		this->mark_cours = new int[size_cours];
+		this->day = day;
+		this->month = month;
+		this->year = year;
+}
+
 void Student::SetDate(int day, int month, int year)
 {
 	this->day = day;

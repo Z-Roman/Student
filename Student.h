@@ -24,33 +24,13 @@ class Student
 	
 public:
 
-	// этот делегируем к главному
-	Student() : Student(name, surname, patronymic, adress, tel, day, month, year)
-	{
-		
-	}
+	Student() : Student("No name", "No surname", "No patronymic", "No adress", "No tel", 1, 1, 2000) {}
 
-	// этот делегируем к главному
-	Student(string name, string surname, string patronymic) : Student (name, surname, patronymic, adress, tel, day, month, year)
-	{
+	Student(string name, string surname, string patronymic) : Student (name, surname, patronymic, "No adress", "No tel", 1, 1, 2000) {}
 
-	}
-
-	// этот конструктор было бы здорово назначить главным
 	Student(string name, string surname, string patronymic, string adress, string tel, int day, int month, int year)
 	{
-		this->name = name;
-		this->surname = surname;
-		this->patronymic = patronymic;
-		this->adress = adress;
-		this->tel = tel;
-		this->mark_cred = new int[size_cred];
-		this->mark_exam = new int[size_exam];
-		this->mark_cours = new int[size_cours];
-		this->day = day;
-		this->month = month;
-		this->year = year;
-		// в главном конструкторе все поля должны быть проинициализированы (например day month year)
+		SetAll(name, surname, patronymic, adress, tel, day, month, year);
 	}
 
 	void SetName(string name)
@@ -77,6 +57,8 @@ public:
 	void operator = (const Student& other);
 
 	Student(const Student& other);
+
+	void SetAll(string name, string surname, string patronymic, string adress, string tel, int day, int month, int year);
 
 	void SetDate(int day, int month, int year);
 
