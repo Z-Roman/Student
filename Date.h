@@ -11,18 +11,13 @@ class Date
 
 public:
 
-	Date()
-	{
-		this->day = 1;
-		this->month = 1;
-		this->year = 1980;
-	}
+	Date() :Date(1, 1, 2000){}
 
 	Date(int day, int month, int year)
 	{
-		this->day = day;
-		this->month = month;
-		this->year = year;
+		SetDay(day);
+		SetMonth(month);
+		SetYear(year);
 	}
 
 	const int GetDay() const
@@ -43,6 +38,16 @@ public:
 	void SetDay(int day)
 	{
 		this->day = day;
+	}
+
+	void SetMonth(int month)
+	{
+		this->month = month;
+	}
+
+	void SetYear(int year)
+	{
+		this->year = year;
 	}
 
 	void SetDate(int d, int m, int y)
