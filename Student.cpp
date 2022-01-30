@@ -165,8 +165,9 @@ void Student::ShowStudent()
 	cout << "Отчество\t\t" << patronymic << "\n";
 	cout << "Дата р.\t\t\t" << day << "." << month << "." << year << "\n";
 	cout << "Адрес\t\t\t" << adress << "\n";
-	cout << "Телефон\t\t\t" << tel << "\n";
-	cout << "Оценки по зачетам\t";
+	cout << "Телефон\t\t\t" << tel;
+
+	cout << "\nОценки по зачетам\t";
 
 		if (size_cred > 0)
 		{
@@ -174,10 +175,9 @@ void Student::ShowStudent()
 			{
 				cout << mark_cred[i] << " ";
 			}
-			cout << "\n";
 		}
 
-	cout << "Оценки по экзаменам\t";
+	cout << "\nОценки по экзаменам\t";
 
 		if (size_exam > 0)
 		{
@@ -185,10 +185,9 @@ void Student::ShowStudent()
 			{
 				cout << mark_exam[i] << " ";
 			}
-			cout << "\n";
 		}
 
-	cout << "Оценки по курсовым\t";
+	cout << "\nОценки по курсовым\t";
 
 		if (size_cours > 0)
 		{
@@ -196,10 +195,9 @@ void Student::ShowStudent()
 			{
 				cout << mark_cours[i] << " ";
 			}
-			cout << "\n";
 		}
 
-	cout << "\n";
+	cout << "\n\n";
 }
 
 Student::~Student()
