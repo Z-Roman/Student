@@ -36,5 +36,6 @@ int main()
 	c.ShowStudent();
 
 	Student d("Igor", "Petrov", "Pavlovich");
+	d.SetMark_Exam(10);
 	d.ShowStudent();
 }

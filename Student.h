@@ -30,7 +30,12 @@ public:
 
 	Student(string name, string surname, string patronymic, string adress, string tel, int day, int month, int year)
 	{
-		SetAll(name, surname, patronymic, adress, tel, day, month, year);
+		SetName(name);
+		SetSurname(surname);
+		SetPatronymic(patronymic);
+		SetAdress(adress);
+		SetTel(tel);
+		SetDate(day, month, year);
 	}
 
 	void SetName(string name)
@@ -45,9 +50,9 @@ public:
 	{
 		this->patronymic = patronymic;
 	}
-	void SetAdress(string Adress)
+	void SetAdress(string adress)
 	{
-		this->adress = Adress;
+		this->adress = adress;
 	}
 	void SetTel(string tel)
 	{
@@ -57,8 +62,6 @@ public:
 	void operator = (const Student& other);
 
 	Student(const Student& other);
-
-	void SetAll(string name, string surname, string patronymic, string adress, string tel, int day, int month, int year);
 
 	void SetDate(int day, int month, int year);
 
