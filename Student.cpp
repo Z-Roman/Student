@@ -3,7 +3,7 @@
 #include "Date.h"
 using namespace std;
 
-void Student::operator=(const Student& other)
+void Student::operator=(const Student& other) //перегрузка оператора присваивания
 {
 	this->name = other.name;
 	this->surname = other.surname;
@@ -54,7 +54,7 @@ void Student::operator=(const Student& other)
 	}
 }
 
-Student::Student(const Student& other)
+Student::Student(const Student& other) //конструктор копирования
 {
 	this->name = other.name;
 	this->surname = other.surname;

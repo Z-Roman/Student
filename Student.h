@@ -11,9 +11,9 @@ class Student
 	string patronymic;
 	string adress = "No adress";
 	string tel = "No tel";
-	int day;
-	int month;
-	int year;
+	int day = 1;
+	int month = 1;
+	int year = 2000;
 	int size_cred = 0;
 	int size_exam = 0;
 	int size_cours = 0;
@@ -25,25 +25,31 @@ class Student
 public:
 
 	// этот делегируем к главному
-	Student() // : Student(...
+	Student() : Student(name, surname, patronymic, adress, tel, day, month, year)
 	{
 		
 	}
 
 	// этот делегируем к главному
-	Student(string name, string surname, string patronymic) // : Student(...
+	Student(string name, string surname, string patronymic) : Student (name, surname, patronymic, adress, tel, day, month, year)
 	{
-		
+
 	}
 
 	// этот конструктор было бы здорово назначить главным
-	Student(string name, string surname, string patronymic, string adress, string tel)
+	Student(string name, string surname, string patronymic, string adress, string tel, int day, int month, int year)
 	{
+		this->name = name;
+		this->surname = surname;
+		this->patronymic = patronymic;
 		this->adress = adress;
 		this->tel = tel;
 		this->mark_cred = new int[size_cred];
 		this->mark_exam = new int[size_exam];
 		this->mark_cours = new int[size_cours];
+		this->day = day;
+		this->month = month;
+		this->year = year;
 		// в главном конструкторе все поля должны быть проинициализированы (например day month year)
 	}
 

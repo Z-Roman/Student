@@ -34,4 +34,7 @@ int main()
 
 	Student c(b);
 	c.ShowStudent();
+
+	Student d("Igor", "Petrov", "Pavlovich");
+	d.ShowStudent();
 }
